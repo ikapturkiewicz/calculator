@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<VBox spacing="10" alignment="CENTER" prefWidth="400" prefHeight="450" fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/javafx">
+    <fx:define>
+        <Font fx:id="FONT" size="18" />
+
+    </fx:define>
+
+
+    <StackPane>
+        <Rectangle  fill="transparent" stroke="red" width="350" height="50"/>
+        <Text fx:id="output"/>
+    </StackPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="CE" prefWidth="125" font ="$FONT" onMouseClicked="#handleCEButton"/>
+        <Button text="C" prefWidth="125" font ="$FONT" onMouseClicked="#handleCButton"/>
+        <Button text='x^2' prefWidth="80" font ="$FONT" onAction="#processOperator"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="sin" prefWidth="80" font ="$FONT" onAction="#processSingleDigitAction"/>
+        <Button text="cos" prefWidth="80" font ="$FONT" onAction="#processSingleDigitAction"/>
+        <Button text="tg" prefWidth="80" font ="$FONT" onAction="#processSingleDigitAction"/>
+        <Button text="pierw" prefWidth="80" font ="$FONT" onAction="#processSingleDigitAction"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="exp()" prefWidth="80" font ="$FONT" onAction="#processSingleDigitAction"/>
+        <Button text="log()" prefWidth="80" font ="$FONT" onAction="#processSingleDigitAction"/>
+        <Button text="ln()" prefWidth="80" font ="$FONT" onAction="#processSingleDigitAction"/>
+        <Button text="1/x" prefWidth="80" font ="$FONT" onAction="#processSingleDigitAction"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="7" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="8" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="9" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="/" prefWidth="80" font ="$FONT" onAction="#processOperator"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="4" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="5" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="6" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="*" prefWidth="80" font ="$FONT" onAction="#processOperator"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="1" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="2" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="3" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="-" prefWidth="80" font ="$FONT" onAction="#processOperator"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="0" prefWidth="80" font ="$FONT" onAction="#processNumpad"/>
+        <Button text="." prefWidth="80" font ="$FONT" onAction="#processOperator"/>
+        <Button text="=" prefWidth="80" font ="$FONT" onAction="#processOperator"/>
+        <Button text="+" prefWidth="80" font ="$FONT" onAction="#processOperator"/>
+    </HBox>
+
+</VBox>
